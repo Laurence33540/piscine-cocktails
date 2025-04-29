@@ -9,8 +9,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class categoryCocktailsController extends AbstractController {
 
-        #[Route("/category/{id}", name:"list-categories")]
-        public function categories($id) {
+        #[Route("/categories", name:"list-categories")]
+        public function categories() : Response{
         
             $categories = [
                 1 => [
@@ -35,10 +35,9 @@ class categoryCocktailsController extends AbstractController {
                 ],
             ];
 
-            $categorie = $categories[$id] ;
 
             return $this->render('categoryCocktails.html.twig', [
-                'categories' => $categories, ]);
+                'categories' => $categories ]);
             
         }   
 }  

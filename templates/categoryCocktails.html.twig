@@ -1,17 +1,24 @@
 {% extends 'base.html.twig' %}
 
+{% block metatitle %}
+	Les catégories de cocktails
+{% endblock metatitle %}
 
 {% block main %}
 
-<h1 class="main-title">Catégories de cocktails</h1>
+	<h1 class="main-title">Catégories de cocktails</h1>
+
+	{% for categorie in categories %}
 
 		<article class="recipe">
 
-			<h2>{{cocktail.nom}}</h2>
-			<p>{{cocktail.description}}</p>
+			<h2>{{categorie.nom}}</h2>
+			<p>{{categorie.description}}</p>
 
 		</article>
 
-	</main>
+	{% endfor %}
 
 {% endblock main %}
+
+

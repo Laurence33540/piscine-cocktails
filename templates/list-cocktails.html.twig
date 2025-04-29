@@ -1,6 +1,10 @@
 //fichier base.html.twig pour définir une extension d'héritage
 {% extends base.html.twig' %}
 
+{% block metatitle %}
+	{{cocktail.nom}}
+{% endblock metatitle %}
+
 {% block main %}
 
 	<main class="main">

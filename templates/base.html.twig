@@ -1,10 +1,39 @@
-{% include 'partial/_header.html.twig' %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block metatitle %}{% endblock metatitle %}</title>
+	<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" />
 
-{% include 'partial/_aside-ad.html.twig' %}
+</head>
+<body>
+
+	<header class="header">
+
+		<a href="{{ path('home') }}">
+			<img class="logo-header" src="{{ asset('assets/img/logo.jpg') }}" alt="logo recettes" />
+		</a>
+
+		<nav class="nav-header">
+
+			<ul class="nav-menu">
+
+				<li><a href="{{ path('home') }}">Accueil</a></li>
+				<li><a href="{{ path('list-cocktails') }}">Liste des cocktails</a></li>
+			</ul>
 
 
-{% block main %}
-{% endblock main %}
+		</nav>
 
+	</header>
 
-{% include 'partial/_footer.html.twig' %}
+{% include 'partials/_aside-ad.html.twig' %}
+
+<main class="main">
+
+	{% block main %} 
+
+	{% endblock main %}
+
+</main>
+
+{% include 'partials/_footer.html.twig' %}
