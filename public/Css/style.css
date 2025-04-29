@@ -91,18 +91,4 @@
     margin-bottom: 15px;
   }
 
-silde{
-background-color:#129b5b;
-color:black;
-margin:auto;
-padding:auto;
-}
 
-slide.bar{
-  background-color:#129b5b;
-  color:black;
-  width: 100%;
-  max-width: 400px;
-  display: block;
-  margin: 0 auto 10px;
-}

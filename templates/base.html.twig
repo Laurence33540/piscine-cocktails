@@ -5,6 +5,17 @@
 
 {% block content %}
 
-{% endblock %}
+<h1 class="main-title">Détail d'un cocktail</h1>
+
+		<article class="recipe">
+
+			<h2>{{cocktail.nom}}</h2>
+			<img class="recipe-image" src="{{cocktail.image}}" alt="{{cocktail.nom}}" />
+
+		</article>
+
+	</main>
+
+{% block end %}
 
 {% include 'partial/_footer.html.twig' %} 
