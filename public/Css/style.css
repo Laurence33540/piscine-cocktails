@@ -1,0 +1,108 @@
+/* Réinitialisation de certaines propriétés pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style général du corps */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #129b5b;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Conteneur global pour centrer le contenu */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  /* --- Style pour la liste des cocktails --- */
+  
+  /* Supprime les puces et espaces par défaut de la liste */
+  .cocktail-list {
+    list-style: none;
+  }
+  
+  /* Chaque élément de la liste est affiché sous forme de bloc */
+  .cocktail-list li {
+    background: #4bd288;
+    border: 1px solid #440808;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    /* On utilise le flex pour aligner l'image et les infos sur la même ligne */
+    display: flex;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  /* L'image a une taille fixe et un petit marge à droite */
+  .cocktail-list li img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Les titres dans chaque élément de cocktail */
+  .cocktail-list li h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  /* --- Style pour la page détaillée d'un cocktail (ex. Old Fashioned) --- */
+  
+  /* Bloc du détail avec un fond blanc et des bordures */
+  .cocktail-detail {
+    background: #9a1f1f;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* L'image s'adapte, centrée sur la page */
+  .cocktail-detail img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  /* La liste des ingrédients */
+  .cocktail-detail ul {
+    list-style: disc; /* Petites puces */
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Titres généraux */
+  h1, h2, h3 {
+    color: #444;
+    margin-bottom: 15px;
+  }
+  
+  /* Pour les paragraphes */
+  p {
+    margin-bottom: 15px;
+  }
+
+silde{
+background-color:#129b5b;
+color:black;
+margin:auto;
+padding:auto;
+}
+
+slide.bar{
+  background-color:#129b5b;
+  color:black;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 10px;
+}

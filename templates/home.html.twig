@@ -1,0 +1,16 @@
+{% extends base.html.twig' %}
+
+	<main class="main">
+    
+//je définis le début du block pour remplacer ou étendre
+	{% block content%}
+
+		<h1 class="main-title">Les trois derniers cocktails</h1>
+
+
+			{% include 'partial/cocktails/_loop-cocktails.html.twig' %}	
+
+	</main>
+
+//je définis la fin du block pour remplacer ou étendre
+{% endblock %}

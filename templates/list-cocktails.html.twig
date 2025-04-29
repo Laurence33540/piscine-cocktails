@@ -1,0 +1,18 @@
+//fichier base.html.twig pour définir une extension d'héritage
+{% extends base.html.twig' %}
+
+
+
+ <main class="main">
+
+{% block content%}
+
+		<h1 class="main-title">Détail d'un cocktail</h1>
+
+			{% include 'partial/cocktails/_loop-cocktails.html.twig' %}	
+
+	</main>				
+
+{% block end %}
+
+    
