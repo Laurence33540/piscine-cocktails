@@ -1,19 +1,17 @@
-
 {% extends 'base.html.twig' %}
+
 
 {% block metatitle %}
 	Les meilleurs cocktails de Merignac
 {% endblock metatitle %}
 
 {% block main %}
-
-	<main class="main">
-
+	
 		<h1 class="main-title">Les deux derniers cocktails</h1>
 
+		{% include 'partials/cocktails/_loop-cocktails.html.twig' %}
 
-			{% include 'partial/cocktails/_loop-cocktails.html.twig' %}	
-            
-	</main>
 
 {% endblock main %}
+
+	

@@ -2,30 +2,50 @@
 
 namespace App\Entity;
 
-class Cocktail{
+use DateTime;
+use Doctrine\ORM\Mapping as ORM;
 
-    public $id; 
+//l'ORM gère les bases de bases de données avec Doctrine
+#[ORM\Entity()]
+class Cocktail {
 
-    public $name;
+	#[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
 
-    public $description;
+	// les propriétés stockent des variables
+	//on peut ajouter, modifier, récupérer ces cocktails
+	// je les migrent vers la base de données (php bin/ console:migration)
 
-    public $ingredients;
-    
-    public $image;
+	public ?int $id;
 
-    public $createAt;
+	#[ORM\Column(length: 255)]
+	public ?string $name;
 
-    public$isPublished;
+	#[ORM\Column(length: 255)]
+	public ?string $description;
 
-    public function __construct($name, $description, $ingredients, $image) {
+	#[ORM\Column(length: 255)]
+	public ?string $ingredients;
+
+	#[ORM\Column(length: 255)]
+	public ?string $image;
+
+	#[ORM\Column]
+	public DateTime $createdAt;
+
+	#[ORM\Column]
+	public bool $isPublished;
+
+
+	public function __construct($name, $description, $ingredients, $image) {
 
 		$this->name = $name;
 		$this->description = $description;
 		$this->ingredients = $ingredients;
 		$this->image = $image;
 
-		$this->createAt = new \DateTime();
+		$this->createdAt = new \DateTime();
 		$this->isPublished = true;
 
 		$this->id = 5;

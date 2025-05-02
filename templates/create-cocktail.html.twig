@@ -1,39 +1,43 @@
-{% extends 'base.html.twig' %}
+   {% extends 'base.html.twig' %}
+
 
 {% block metatitle %}
-         Créer un cocktail
-{% endblock metatitle}
+	Créer un cocktail
+{% endblock metatitle %}
 
-{% block main%}
+{% block main %}
 
-{% for message in app.flashes('success') %}
+		{% for message in app.flashes('success') %}
 			<div class="success-message">
 				{{ message }}
 			</div>
         {% endfor %}
+	
+		<h1 class="main-title">Création d'un cocktail</h1>
 
-<h1 class=main-title">Création d'un cocktail</h1>
+		<form method="POST">
+		
+			<label for="name">Nom
+				<input type="text" name="name">
+			</label>
 
-<form method="POST">
+			<label for="description">Description
+				<input type="text" name="description">
+			</label>
 
-<label for="name">Nom
-<input type="text" name="name">
-</label>
+			<label for="ingredients">Ingredients
+				<textarea name="ingredients"></textarea>
+			</label>
 
-<label for="name">Description
-<input type="text" name="description">
-</label>
+			<label for="image">Image
+				<input type="text" name="image">
+			</label>
 
-<label for="name">Ingredients
-<input type="text" name="ingredients">
-</label>
 
-<label for="name">Image
-<input type="text" name="image">
-</label>
+			<input type="submit">
 
-<input type="submit">
+		</form>
 
-</form>
+{% endblock main %}
 
- {% endblock main %}
+	

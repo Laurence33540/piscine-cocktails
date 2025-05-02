@@ -1,5 +1,3 @@
-
-
 <div class="recipes-list-container">
 
 			{% for cocktail in cocktails %}
@@ -9,7 +7,7 @@
 					<h2>{{cocktail.nom}}</h2>
 					<img class="recipe-image" src="{{cocktail.image}}" alt="{{cocktail.nom}}" />
 
-					<a href="{{ path('detail-cocktail', {'id' : cocktail.id}) }}">Voir le détail du cocktail</a>
+					<a href="{{ path('single-cocktail', {'id' : cocktail.id}) }}">Voir le détail du cocktail</a>
 
 
 				</article>
@@ -17,4 +15,3 @@
 			{% endfor %}
 		</div>
 
-	 
