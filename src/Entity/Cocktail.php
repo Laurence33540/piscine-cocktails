@@ -13,7 +13,7 @@ class Cocktail {
     #[ORM\GeneratedValue]
     #[ORM\Column]
 
-	// les propriétés stockent des variables
+	// les propriétés stockent des variables et je stocke dans des colonnes, varchar et text...
 	//on peut ajouter, modifier, récupérer ces cocktails
 	// je les migrent vers la base de données (php bin/ console:migration)
 
@@ -47,8 +47,7 @@ class Cocktail {
 
 		$this->createdAt = new \DateTime();
 		$this->isPublished = true;
-
-		$this->id = 5;
 	}
 
 }
+
